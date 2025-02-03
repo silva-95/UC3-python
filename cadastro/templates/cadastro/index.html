@@ -1,0 +1,25 @@
+{% extends "global/base.html" %}
+
+{% block formulario %}
+
+<div class="container">
+  <h1>Cadastro Contato</h1>
+    <form action="{% url 'salvar' %}" method="post">
+      {% csrf_token %}
+    <label for="nome">Nome</label>
+    <input type="text" name="nome" class="form-control">
+    <br>
+    <br>
+    <label for="email">Email</label>
+    <input type="email" name="email" class="form-control">
+    <br>
+    <br>
+    <label for="idade">Idade</label>
+    <input type="number" name="idade" class="form-control">
+    <br>
+    <br>
+    <button class="btn btn-primary">Enviar</button>
+  </form>
+</div>
+
+{% endblock formulario %} 
